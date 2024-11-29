@@ -1,0 +1,11 @@
+.mt-homepage-content {
+  margin-top: 1rem
+}
+@media (min-width: 768px) {
+  .mt-homepage-content {
+    margin-top: initial
+  }
+}
+.loading-body {
+  z-index: 1021
+}

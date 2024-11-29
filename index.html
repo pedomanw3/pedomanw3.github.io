@@ -4,6 +4,7 @@
 <head>
   <title>pedoman.w3</title>
   <link href="/lib/bootstrap/css/bootstrap.css" hreflang="en" rel="stylesheet" title="Bootstrap" type="text/css">
+  <link href="/lib/style-homepage.css" hreflang="en" rel="stylesheet" title="Bootstrap" type="text/css">
   <meta charset="UTF-8">
   <meta name="author" content="banditsKid">
   <meta name="description" content="Pedoman World Wide Web Gratis">
@@ -15,10 +16,10 @@
   <script src="/lib/w3codecolor.js" type="text/javascript"></script>
 </head>
 
-<body>
-  <header w3-include-html="/lib/includeHTML/header.html"></header>
-  <main>
-    <div class="card-group flex-column flex-md-row container-fluid" id="cardHomepageContent">
+<body onload="bodyLoad()">
+  <header class="visually-hidden" w3-include-html="/lib/includeHTML/header.html"></header>
+  <main class="visually-hidden">
+    <div class="card-group flex-column flex-md-row container-fluid mt-homepage-content" id="cardHomepageContent">
       <div class="card text-center mb-3 mb-md-0" w3-repeat="objectContentHomepage">
         <img class="card-img-top" src="{{ImgSrc}}" alt="{{ImgAlt}}" width="{{ImgWidth}}" height="{{ImgHeight}}">
         </figure>
@@ -30,7 +31,8 @@
       </div>
     </div>
   </main>
-  <footer w3-include-html="/lib/includeHTML/footer.html"></footer>
+  <footer class="visually-hidden" w3-include-html="/lib/includeHTML/footer.html"></footer>
+  <div class="visually-hidden" id="bodyLoad" w3-include-html="/lib/includeHTML/loading.html"></div>
   <script src="/lib/script-homepage.js" type="text/javascript"></script>
   <script type="text/javascript">w3CodeColor();</script>
 </body>
