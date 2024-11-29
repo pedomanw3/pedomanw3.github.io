@@ -5,6 +5,9 @@
   .mt-homepage-content {
     margin-top: initial
   }
+  .mt-homepage-content .card {
+    max-width: 280px;
+  }
 }
 .loading-body {
   z-index: 1021
