@@ -1,0 +1,10 @@
+.loading-body {
+  z-index: 1021
+}
+.visually-hidden.opacity-100 {  
+  opacity: 0 !important;
+}
+.opacity-100.transition-opacity {
+  transition-property: opacity;
+  transition-delay: 0.3s;
+}
