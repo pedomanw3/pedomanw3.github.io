@@ -1,11 +1,8 @@
-.mt-homepage-content {
-  margin-top: 1rem
+.homepage-content-card {
+  width: 280px;
 }
-@media (min-width: 768px) {
-  .mt-homepage-content {
-    margin-top: initial
-  }
-  .mt-homepage-content .card {
-    max-width: 280px;
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-group.homepage-content .card-text {
+    height: 48px;
   }
 }

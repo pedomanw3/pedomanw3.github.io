@@ -17,10 +17,10 @@
   <script src="/lib/w3codecolor.js" type="text/javascript"></script>
 </head>
 
-<body class="homepage">
+<body class="homepage" onload="readystateStatus()" onresize="bodyResize()">
   <header class="visually-hidden opacity-100 transition-opacity" w3-include-html="/lib/includeHTML/header.html"></header>
   <main class="visually-hidden opacity-100 transition-opacity">
-    <div class="card-group flex-column flex-md-row container-fluid justify-content-md-center mt-homepage-content" id="cardHomepageContent">
+    <div class="card-group d-block d-md-flex container-fluid container-md mt-3 mt-md-0 homepage-content" id="cardHomepageContent">
       <div class="card text-center mb-3 mb-md-0" w3-repeat="objectContentHomepage">
         <img class="card-img-top" src="{{ImgSrc}}" alt="{{ImgAlt}}" width="{{ImgWidth}}" height="{{ImgHeight}}">
         </figure>

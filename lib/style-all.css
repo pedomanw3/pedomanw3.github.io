@@ -6,5 +6,12 @@
 }
 .opacity-100.transition-opacity {
   transition-property: opacity;
-  transition-delay: 0.3s;
+  transition-delay: 0.1s;
+}
+@media (min-width: 768px) {
+  nav form input.form-control {
+    max-width: 210px;
+    transition-property: max-width;
+    transition-delay: 0s;
+  }
 }
