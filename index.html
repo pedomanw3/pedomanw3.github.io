@@ -5,16 +5,30 @@
   <title>pedoman.w3</title>
   <link href="/lib/bootstrap/css/bootstrap.css" hreflang="en" rel="stylesheet" title="Bootstrap" type="text/css">
   <link href="/lib/style-all.css" hreflang="en" rel="stylesheet" title="Bootstrap" type="text/css">
-  <link href="/lib/style-homepage.css" hreflang="en" rel="stylesheet" title="Bootstrap" type="text/css">
   <link rel="preload" fetchpriority="high" as="image" href="/lib/svg/html5.svg" type="image/svg+xml">
+  <style>
+    @media (min-width: 768px) and (max-width: 991px) {
+      .card-group.homepage-content .card-text {
+        height: 48px;
+      }
+    }
+  </style>
   <meta charset="UTF-8">
   <meta name="author" content="banditsKid">
   <meta name="description" content="Pedoman World Wide Web Gratis">
   <meta name="keywords" content="HTML, Tag HTML, Atribut HTML, CSS, JavaScript">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    var cardhomepageObject = {
+      "objectContentHomepage": [
+        { "ImgSrc": "/lib/svg/html5.svg", "ImgAlt": "Ikon HTML5", "ImgWidth": "60", "ImgHeight": "80", "CardTitle": "HTML", "CardText": "HyperText Markup Language", "AHref": "/html/index.html" },
+        { "ImgSrc": "/lib/svg/css.svg", "ImgAlt": "Ikon CSS", "ImgWidth": "60", "ImgHeight": "80", "CardTitle": "CSS", "CardText": "Cascading Style Sheets", "AHref": "/css/index.html" },
+        { "ImgSrc": "/lib/svg/js.svg", "ImgAlt": "Ikon JavaScript", "ImgWidth": "60", "ImgHeight": "80", "CardTitle": "JS", "CardText": "JavaScript", "AHref": "/js/index.html" }
+      ]
+    }
+  </script>
   <script src="/lib/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="/lib/w3.js"></script>
-  <script src="/lib/w3codecolor.js"></script>
 </head>
 
 <body class="homepage" onload="readystateStatus()">
@@ -34,8 +48,22 @@
   <footer class="opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/lib/includeHTML/footer.html"></footer>
   <div id="bodyOverlay" w3-include-html="/lib/includeHTML/loading.html"></div>
   <script src="/lib/script-all.js"></script>
-  <script src="/lib/script-homepage.js"></script>
-  <script>w3CodeColor();</script>
+  <script>
+    w3.displayObject("cardHomepageContent", cardhomepageObject);
+    function homepagecontentResize() {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        homepagecontentResizeTrue();
+      } else {
+        homepagecontentResizeFalse();
+      }
+    }
+    function homepagecontentResizeTrue() {
+      w3.addClass("#cardHomepageContent", "position-absolute top-50 start-50 translate-middle justify-content-center flex-nowrap");
+    }
+    function homepagecontentResizeFalse() {
+      w3.removeClass("#cardHomepageContent", "position-absolute top-50 start-50 translate-middle justify-content-center flex-nowrap");
+    }
+  </script>
 </body>
 
 </html>
