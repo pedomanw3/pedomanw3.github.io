@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test</title>
+    <style>
+      .text-center{text-align:center;}
+      .visually-hidden{position:absolute;clip:rect(0,0,0,0)}
+      .transition-clip{transition-property:clip;transition-duration:0s}
+      .opacity-0{opacity:0}opacity-100{opacity:100}
+      .transition-opacity{transition-property:opacity;transition-duration:1s;}
+      .transition-delay{transition-delay:1s}
+      .div-transition-1{margin:auto;margin-bottom:1rem;border:solid;width:200px;height:150px;}
+      .div-btn{margin:auto;width:200px}
+    </style>
+  </head>
+  <body>
+    <h1 class="text-center">Tes Transition visually-hidden</h1>
+    <div class="div-transition-1 text-center">
+      <div class="div-transition-2 visually-hidden transition-delay">
+        <div class="div-transition-3 transition-opacity opacity-0">
+          <h2>Opacity</h2>
+          <p>Konten Ujicoba transition opacity</p>
+        </div>
+      </div>
+    </div>
+    <div class="div-btn text-center">
+      <button onclick="runShowHideClick()">Show/Hide</button>
+    </div>
+    <script>
+      function runShowHideClick() {
+        let divTransition2 = document.getElementsByClassName("div-transition-2")[0],
+        divTransition3 = document.getElementsByClassName("div-transition-3")[0];
+        divTransition2.classList.toggle("visually-hidden");
+        divTransition3.classList.toggle("opacity-0");
+        divTransition3.classList.toggle("opacity-100");
+      }
+    </script>
+  </body>
+</html>
