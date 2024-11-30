@@ -1,19 +1,27 @@
-.loading-body {
+.body-overlay {
   z-index: 1021
 }
 @media (min-width: 768px) {
   .navbar .form-control {
     max-width: 210px;
-    transition-property: max-width;
-    transition-duration: 0.1s;
   }
-}
-
-/* transition */
- .navbar-nav {
-  transition-delay: 0.05s;
-}
-.transition-opacity-ready-state {
-  transition-property: opacity;
-  transition-duration: 0.5s;
+  /* transition medium breakpoint */
+  .transition-md-opacity {
+    transition-property: opacity;
+  }
+  .transition-md-max-width {
+    transition-property: max-width;
+  }
+  .transition-md-duration-015s {
+    transition-duration: 0.15s;
+  }
+  .transition-md-duration-05s {
+    transition-duration: 0.5s;
+  }
+  .transition-md-delay-navbar-nav {
+    transition-delay: 0.05s;
+  }
+  .search-input-focused .navbar-nav.transition-md-delay-navbar-nav {
+    transition-delay: 0s;
+  }
 }
