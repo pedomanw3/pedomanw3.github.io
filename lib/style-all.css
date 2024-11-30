@@ -13,7 +13,7 @@
  .navbar-nav {
   transition-delay: 0.05s;
 }
-.transition-opacity {
+.transition-opacity-ready-state {
   transition-property: opacity;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
 }
