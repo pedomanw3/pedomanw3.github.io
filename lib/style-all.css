@@ -2,25 +2,18 @@
   z-index: 1021
 }
 @media (min-width: 768px) {
-  nav form input.form-control {
+  .navbar .form-control {
     max-width: 210px;
     transition-property: max-width;
+    transition-duration: 0.1s;
   }
-}
-.visually-hidden.opacity-100 {  
-  opacity: 0 !important;
 }
 
 /* transition */
  .navbar-nav {
   transition-delay: 0.05s;
 }
-.transition-opacity,
-.opacity-100.transition-opacity {
+.transition-opacity {
   transition-property: opacity;
-}
-.transition-opacity,
-nav form input.form-control
-.opacity-100.transition-opacity {
-  transition-duration: 0.1s;
+  transition-duration: 0.3s;
 }
