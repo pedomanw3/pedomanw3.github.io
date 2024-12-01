@@ -2,7 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="id-ID">
 
 <head>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'sha256-iJtIu8KGAHIRLjlzcownUojxYs9stjqyOi0Wi0rZWdo='">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' 
+        'sha256-iJtIu8KGAHIRLjlzcownUojxYs9stjqyOi0Wi0rZWdo='
+        'sha256-GnfH10LPn+0ZkebWdW1qFoOASjNu/cCRY7VVZUPQPtw='
+        'sha256-Qv/GoEOLwOhuhd07Sw+LYgz2gttLEu2AXqRU2Kk3eHk='">
   <title>Pedoman.w3</title>
   <meta charset="UTF-8">
   <meta name="author" content="banditsKid">
@@ -29,6 +33,7 @@
     .homepage-content {
       top: 48%;
     }
+
     @media (min-width: 768px) and (max-width: 991px) {
       .homepage-content .card-group .card-text {
         height: 48px;
@@ -57,15 +62,15 @@
   <footer class="opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/lib/includeHTML/footer.html"></footer>
   <div id="bodyOverlay" w3-include-html="/lib/includeHTML/loading.html"></div>
   <script title="JS Pedoman.w3 Bagian Bawah" src="/lib/script-all.js"></script>
-  <script title="JS Beranda Bagian Bawah" type="text/javascript">
+  <script title="JS Beranda Bagian Bawah" integrity="sha256-Qv/GoEOLwOhuhd07Sw+LYgz2gttLEu2AXqRU2Kk3eHk=" type="text/javascript">
     w3.displayObject("homepageCardGroup", homepagecardObject);
     function homepagecardResponsive() {
       if (window.matchMedia("(min-width: 768px)").matches) {
-        w3.addClass(".homepage-content", 
-        "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
+        w3.addClass(".homepage-content",
+          "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
       } else {
-        w3.removeClass(".homepage-content", 
-        "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
+        w3.removeClass(".homepage-content",
+          "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
       }
     }
   </script>
