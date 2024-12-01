@@ -1,39 +1,140 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>test</title>
-    <style>
-      .text-center{text-align:center;}
-      .visually-hidden{position:absolute;clip:rect(0,0,0,0)}
-      .transition-clip{transition-property:clip;transition-duration:0s}
-      .opacity-0{opacity:0}opacity-100{opacity:100}
-      .transition-opacity{transition-property:opacity;transition-duration:1s;}
-      .transition-delay{transition-delay:1s}
-      .div-transition-1{margin:auto;margin-bottom:1rem;border:solid;width:200px;height:150px;}
-      .div-btn{margin:auto;width:200px}
-    </style>
-  </head>
-  <body>
-    <h1 class="text-center">Tes Transition visually-hidden</h1>
-    <div class="div-transition-1 text-center">
-      <div class="div-transition-2 visually-hidden transition-delay">
-        <div class="div-transition-3 transition-opacity opacity-0">
-          <h2>Opacity</h2>
-          <p>Konten Ujicoba transition opacity</p>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id-ID">
+
+<head>
+  <title>Pedoman.w3</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="banditsKid">
+  <meta name="description" content="Pedoman World Wide Web Gratis">
+  <meta name="keywords" content="HTML, Tag HTML, Atribut HTML, CSS, JavaScript">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script title="Object Homepage Card" type="text/javascript">
+    var objectHomepageCard = {
+      "Inputlist": [
+        { "ImgSrc": "/lib/svg/html5.svg", "ImgAlt": "Ikon HTML5", "ImgWidth": "60", "ImgHeight": "80", "CardTitle": "HTML", "CardText": "HyperText Markup Language", "AHref": "/html/index.html" },
+        { "ImgSrc": "/lib/svg/css.svg", "ImgAlt": "Ikon CSS", "ImgWidth": "60", "ImgHeight": "80", "CardTitle": "CSS", "CardText": "Cascading Style Sheets", "AHref": "/css/index.html" },
+        { "ImgSrc": "/lib/svg/js.svg", "ImgAlt": "Ikon JavaScript", "ImgWidth": "60", "ImgHeight": "80", "CardTitle": "JS", "CardText": "JavaScript", "AHref": "/js/index.html" }
+      ]
+    }
+  </script>
+  <script title="JS Framework Bootstrap" src="/lib/bootstrap/js/bootstrap.bundle.js"></script>
+  <script title="JS Framework W3" src="/lib/w3.js"></script>
+  <link id="cssFrameworkBootstrap" href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link id="stylesheetPedomanw3" href="/lib/style-all.css" rel="stylesheet" type="text/css">
+  <link title="Preload SVG html5" href="/lib/svg/html5.svg" rel="preload" fetchpriority="high" as="image" type="image/svg+xml">
+  <link title="Favicon 16x16" href="favicon-16x16.png" rel="icon" size="16x16" type="image/x-icon">
+  <link title="Favicon 32x32" href="favicon-32x32.png" rel="icon" size="32x32" type="image/x-icon">
+  <style title="Stylesheet Beranda" type="text/css">
+    .homepage-content {
+      top: 48%;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .homepage-content .card-group .card-text {
+        height: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body class="homepage" onload="readystateStatus()">
+  <header class="sticky-top transition-md-opacity transition-md-duration-05s">
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container-lg px-4">
+        <span class="navbar-brand mb-0 h1">Pedoman.w3</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav fs-5 justify-content-start flex-grow-1 transition-md-opacity transition-md-duration-015s transition-md-delay-navbar-nav" id="listTopnav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/html/index.html">HTML</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/css/index.html">CSS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/js/index.html">JavaScript</a>
+              </li>
+            </ul>
+            <form class="d-flex mt-3 mt-md-0" role="search">
+              <input class="form-control me-1 transition-md-max-width transition-md-duration-015s position-fixed" type="search" placeholder="Search" name="search" aria-label="Search" style="padding: 10px; right: 167px;">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="transition-md-opacity transition-md-duration-05s">
+    <div class="homepage-content container-fluid container-md text-center position-absolute start-50 translate-middle justify-content-center flex-nowrap">
+      <h1 class="display-5 my-3 pb-3 pb-md-0">Referensi Web Development</h1>
+      <div class="card-group d-block d-md-flex" id="contentHomepageCard">
+        <div class="card mb-3 mb-md-0">
+          <img class="card-img-top" src="/lib/svg/html5.svg" alt="Ikon HTML5" width="60" height="80">
+          <div class="card-body">
+            <h5 class="card-title">HTML</h5>
+            <p class="card-text">HyperText Markup Language</p>
+            <a class="card-link btn btn-primary" href="/html/index.html" hreflang="id" type="text/html">Mulai</a>
+          </div>
+        </div>
+        <div class="card mb-3 mb-md-0">
+          <img class="card-img-top" src="/lib/svg/css.svg" alt="Ikon CSS" width="60" height="80">
+          <div class="card-body">
+            <h5 class="card-title">CSS</h5>
+            <p class="card-text">Cascading Style Sheets</p>
+            <a class="card-link btn btn-primary" href="/css/index.html" hreflang="id" type="text/html">Mulai</a>
+          </div>
+        </div>
+        <div class="card mb-3 mb-md-0">
+          <img class="card-img-top" src="/lib/svg/js.svg" alt="Ikon JavaScript" width="60" height="80">
+          <div class="card-body">
+            <h5 class="card-title">JS</h5>
+            <p class="card-text">JavaScript</p>
+            <a class="card-link btn btn-primary" href="/js/index.html" hreflang="id" type="text/html">Mulai</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="div-btn text-center">
-      <button onclick="runShowHideClick()">Show/Hide</button>
+  </main>
+  <footer class="transition-md-opacity transition-md-duration-05s">
+    <div class="container py-5 fixed-bottom text-center">banditsKid</div>
+  </footer>
+  <div id="bodyOverlay" class=" visually-hidden">
+    <div class="bg-white w-100 h-100 position-fixed top-0 left-0 body-overlay">
+      <div class="d-flex align-items-center position-absolute top-50 start-50 translate-middle text-center">
+        <strong class="me-3 visually-hidden" id="textUninitialized" role="status">Belum mulai memuat</strong>
+        <div class="ms-auto visually-hidden" id="iconUninitialized" aria-hidden="true"><i class="fa-solid fa-heart-crack"></i></div>
+        <strong class="me-3" id="textLoading" role="status">Sedang memuat</strong>
+        <div class="spinner-border ms-auto" id="spinnerLoading" aria-hidden="true"></div>
+      </div>
     </div>
-    <script>
-      function runShowHideClick() {
-        let divTransition2 = document.getElementsByClassName("div-transition-2")[0],
-        divTransition3 = document.getElementsByClassName("div-transition-3")[0];
-        divTransition2.classList.toggle("visually-hidden");
-        divTransition3.classList.toggle("opacity-0");
-        divTransition3.classList.toggle("opacity-100");
+  </div>
+  <script title="JS Pedoman.w3 Bagian Bawah" src="/lib/script-all.js"></script>
+  <script title="JS Beranda Bagian Bawah" type="text/javascript">
+    w3.displayObject("contentHomepageCard", objectHomepageCard);
+    function homepagecontentResize() {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        homepagecontentResizeTrue();
+      } else {
+        homepagecontentResizeFalse();
       }
-    </script>
-  </body>
+    }
+    function homepagecontentResizeTrue() {
+      w3.addClass(".homepage-content", "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
+    }
+    function homepagecontentResizeFalse() {
+      w3.removeClass(".homepage-content", "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
+    }
+  </script>
+</body>
+
 </html>
