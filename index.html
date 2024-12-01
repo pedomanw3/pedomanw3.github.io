@@ -7,7 +7,7 @@
         default-src 'none'; 
         script-src 'self'
         'sha256-qF41wi88rFPitgm5H4ofd2AsXFU3x01/hDDaUh8n1SY='
-        'sha256-6pMdPTvctDGr4TRSwynIWNtjyyusUUBhubzTN2TfwUY='
+        'sha256-u8Xa5fEIHQEAunMVCEB9zFX0WfoFpLTzZPijphXp9aU='
         'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=';
         connect-src 'self'; 
         img-src 'self' data:; 
@@ -55,7 +55,7 @@
 <body class="homepage">
   <header class="sticky-top opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/data/header.html"></header>
   <main class="opacity-0 transition-md-opacity transition-md-duration-05s">
-    <div class="homepage-content container-fluid container-md text-center">
+    <div class="homepage-content container-fluid container-lg px-md-4 text-center">
       <h1 class="display-5 my-3 pb-3 pb-md-0">Referensi Web Development</h1>
       <div class="card-group d-block d-md-flex" id="homepageCardGroup">
         <div class="card mb-3 mb-md-0" w3-repeat="Inputlist">
@@ -81,6 +81,11 @@
       } else {
         w3.removeClass(".homepage-content",
           "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
+      }
+      if (window.matchMedia("(min-width: 992px)").matches) {
+        w3.removeClass(".homepage-content", "px-md-4");
+      } else {
+        w3.addClass(".homepage-content", "px-md-4");
       }
     }
   </script>
