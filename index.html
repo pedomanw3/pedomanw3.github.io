@@ -3,8 +3,8 @@
 
 <head>
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'none'; script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='; 
-        connect-src 'self'; img-src 'self'; style-src 'self';base-uri 'self';form-action 'self'">
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self';
+        img-src 'self' data:; style-src 'self';base-uri 'self';form-action 'self'; font-src 'self'">
   <title>Pedoman.w3</title>
   <meta charset="UTF-8">
   <meta name="author" content="banditsKid">
@@ -13,24 +13,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script title="JS Bagian Atas Pedoman.w3" src="/lib/script-all-top.js"></script>
   <script title="JS Bagian Atas Beranda" src="/lib/script-homepage-top.js"></script>
-  <script title="JS Framework Bootstrap" src="/lib/bootstrap/js/bootstrap.bundle.js"></script>
-  <script title="JS Framework W3" src="/lib/w3.js"></script>
-  <link title="Preload SVG html5" href="/lib/svg/html5.svg" rel="preload" fetchpriority="high" as="image" type="image/svg+xml">
+  <script title="JS Framework Bootstrap Minified" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script title="JS Framework W3" src="/lib/w3/w3.js"></script>
   <link title="Favicon 16x16" href="favicon-16x16.png" rel="icon" size="16x16" type="image/x-icon">
   <link title="Favicon 32x32" href="favicon-32x32.png" rel="icon" size="32x32" type="image/x-icon">
-  <link id="cssFrameworkBootstrap" href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link id="cssFrameworkBootstrapMinified" href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link id="cssFontawesome" href="/lib/fontawesome/css/fontawesome.css" rel="stylesheet" type="text/css">
+  <link id="cssFontawesomeBrands" href="/lib/fontawesome/css/brands.css" rel="stylesheet" type="text/css">
   <link id="stylesheetPedomanw3" href="/lib/style-all.css" rel="stylesheet" type="text/css">
   <link id="stylesheetHomepage" href="/lib/style-homepage.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="homepage">
-  <header class="sticky-top opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/lib/includeHTML/header.html"></header>
+  <header class="sticky-top opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/data/header.html"></header>
   <main class="opacity-0 transition-md-opacity transition-md-duration-05s">
     <div class="homepage-content container-fluid container-md text-center">
       <h1 class="display-5 my-3 pb-3 pb-md-0">Referensi Web Development</h1>
       <div class="card-group d-block d-md-flex" id="homepageCardGroup">
         <div class="card mb-3 mb-md-0" w3-repeat="Inputlist">
-          <img class="card-img-top" src="{{ImgSrc}}" alt="{{ImgAlt}}" width="{{ImgWidth}}" height="{{ImgHeight}}">
+          <span><i class="{{NilaiFa}}"></i></span>
           <div class="card-body">
             <h2 class="card-title h5">{{CardTitle}}</h2>
             <p class="card-text">{{CardText}}</p>
@@ -40,8 +41,8 @@
       </div>
     </div>
   </main>
-  <footer class="opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/lib/includeHTML/footer.html"></footer>
-  <div id="bodyOverlay" w3-include-html="/lib/includeHTML/loading.html"></div>
+  <footer class="opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/data/footer.html"></footer>
+  <div id="bodyOverlay" w3-include-html="/data/loading.html"></div>
   <script title="JS Bagian Bawah Pedoman.w3" src="/lib/script-all-bottom.js"></script>
   <script title="JS Bagian Bawah Beranda" src="/lib/script-homepage-bottom.js"></script>
 </body>
