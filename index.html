@@ -22,9 +22,9 @@
   <script title="JS Bagian Atas Beranda" type="text/javascript">
     var homepagecardObject = {
       "Inputlist": [
-        { "NilaiFa": "fa-brands fa-5x fa-html5", "JudulKartu": "HTML", "TeksKartu": "Hypertext Markup Language" },
-        { "NilaiFa": "fa-brands fa-5x fa-css", "JudulKartu": "CSS", "TeksKartu": "Cascading Style Sheets" },
-        { "NilaiFa": "fa-brands fa-5x fa-js", "JudulKartu": "JS", "TeksKartu": "JavaScript" }
+        { "NilaiFa": "fa-brands fa-5x fa-html5", "JudulKartu": "HTML", "TeksKartu": "Hypertext Markup Language", "NilaiHref" : "/html/index.html" },
+        { "NilaiFa": "fa-brands fa-5x fa-css", "JudulKartu": "CSS", "TeksKartu": "Cascading Style Sheets", "NilaiHref" : "/css/index.html" },
+        { "NilaiFa": "fa-brands fa-5x fa-js", "JudulKartu": "JS", "TeksKartu": "JavaScript", "NilaiHref" : "js/index.js" }
       ]
     }
   </script>
@@ -60,7 +60,7 @@
           <div class="card-body">
             <h2 class="card-title h5">{{JudulKartu}}</h2>
             <p class="card-text">{{TeksKartu}}</p>
-            <a class="card-link btn btn-primary" href="{{AHref}}" hreflang="id" type="text/html">Mulai</a>
+            <a class="card-link btn btn-primary" href="{{NilaiHref}}" hreflang="id" type="text/html">Mulai</a>
           </div>
         </div>
       </div>
