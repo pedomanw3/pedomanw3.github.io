@@ -3,44 +3,27 @@
 
 <head>
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'none'; script-src 'self'; connect-src 'self'; 
-        img-src 'self'; style-src 'self';base-uri 'self';form-action 'self'">
+        content="default-src 'none'; script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='; 
+        connect-src 'self'; img-src 'self'; style-src 'self';base-uri 'self';form-action 'self'">
   <title>Pedoman.w3</title>
   <meta charset="UTF-8">
   <meta name="author" content="banditsKid">
   <meta name="description" content="Pedoman World Wide Web Gratis">
   <meta name="keywords" content="HTML, Tag HTML, Atribut HTML, CSS, JavaScript">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script title="JS Beranda Bagian Atas" type="text/javascript">
-    var homepagecardObject = {
-      "Inputlist": [
-        { "ImgSrc": "/lib/svg/html5.svg", "ImgAlt": "Ikon HTML5", "ImgWidth": "60", "ImgHeight": "80", "CardTitle": "HTML", "CardText": "HyperText Markup Language", "AHref": "/html/index.html" },
-        { "ImgSrc": "/lib/svg/css.svg", "ImgAlt": "Ikon CSS", "ImgWidth": "60", "ImgHeight": "80", "CardTitle": "CSS", "CardText": "Cascading Style Sheets", "AHref": "/css/index.html" },
-        { "ImgSrc": "/lib/svg/js.svg", "ImgAlt": "Ikon JavaScript", "ImgWidth": "60", "ImgHeight": "80", "CardTitle": "JS", "CardText": "JavaScript", "AHref": "/js/index.html" }
-      ]
-    }
-  </script>
+  <script title="JS Bagian Atas Pedoman.w3" src="/lib/script-all-top.js"></script>
+  <script title="JS Bagian Atas Beranda" src="/lib/script-homepage-top.js"></script>
   <script title="JS Framework Bootstrap" src="/lib/bootstrap/js/bootstrap.bundle.js"></script>
   <script title="JS Framework W3" src="/lib/w3.js"></script>
-  <link id="cssFrameworkBootstrap" href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link id="stylesheetPedomanw3" href="/lib/style-all.css" rel="stylesheet" type="text/css">
   <link title="Preload SVG html5" href="/lib/svg/html5.svg" rel="preload" fetchpriority="high" as="image" type="image/svg+xml">
   <link title="Favicon 16x16" href="favicon-16x16.png" rel="icon" size="16x16" type="image/x-icon">
   <link title="Favicon 32x32" href="favicon-32x32.png" rel="icon" size="32x32" type="image/x-icon">
-  <style title="Stylesheet Beranda" type="text/css">
-    .homepage-content {
-      top: 48%;
-    }
-
-    @media (min-width: 768px) and (max-width: 991px) {
-      .homepage-content .card-group .card-text {
-        height: 48px;
-      }
-    }
-  </style>
+  <link id="cssFrameworkBootstrap" href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link id="stylesheetPedomanw3" href="/lib/style-all.css" rel="stylesheet" type="text/css">
+  <link id="stylesheetHomepage" href="/lib/style-homepage.css" rel="stylesheet" type="text/css">
 </head>
 
-<body class="homepage" onload="readystateStatus()">
+<body class="homepage">
   <header class="sticky-top opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/lib/includeHTML/header.html"></header>
   <main class="opacity-0 transition-md-opacity transition-md-duration-05s">
     <div class="homepage-content container-fluid container-md text-center">
@@ -59,19 +42,8 @@
   </main>
   <footer class="opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/lib/includeHTML/footer.html"></footer>
   <div id="bodyOverlay" w3-include-html="/lib/includeHTML/loading.html"></div>
-  <script title="JS Pedoman.w3 Bagian Bawah" src="/lib/script-all.js"></script>
-  <script title="JS Beranda Bagian Bawah" type="text/javascript">
-    w3.displayObject("homepageCardGroup", homepagecardObject);
-    function homepagecardResponsive() {
-      if (window.matchMedia("(min-width: 768px)").matches) {
-        w3.addClass(".homepage-content",
-          "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
-      } else {
-        w3.removeClass(".homepage-content",
-          "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
-      }
-    }
-  </script>
+  <script title="JS Bagian Bawah Pedoman.w3" src="/lib/script-all-bottom.js"></script>
+  <script title="JS Bagian Bawah Beranda" src="/lib/script-homepage-bottom.js"></script>
 </body>
 
 </html>
