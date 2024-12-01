@@ -3,8 +3,15 @@
 
 <head>
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data:;
-        style-src 'self';base-uri 'self';form-action 'self'; font-src 'self'; require-trusted-types-for 'script'">
+        content="
+        default-src 'none'; 
+        script-src 'self' 'unsafe-inline' 'unsafe-hashes';
+        connect-src 'self'; 
+        img-src 'self' data:; 
+        style-src 'self' 'sha256-jtMkJG958TNqtzhpP/2mGtgtBMkRw3WZdlqVXdlbX7s='; 
+        base-uri 'self'; 
+        form-action 'self'; 
+        font-src 'self';">
   <title>Pedoman.w3</title>
   <meta charset="UTF-8">
   <meta name="author" content="banditsKid">
@@ -12,7 +19,15 @@
   <meta name="keywords" content="HTML, Tag HTML, Atribut HTML, CSS, JavaScript">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script title="JS Bagian Atas Pedoman.w3" src="/lib/script-all-top.js"></script>
-  <script title="JS Bagian Atas Beranda" src="/lib/script-homepage-top.js"></script>
+  <script title="JS Bagian Atas Beranda" type="text/javascript">
+    var homepagecardObject = {
+      "Inputlist": [
+        { "NilaiFa": "fa-brands fa-5x fa-html5", "JudulKartu": "HTML", "TeksKartu": "Hypertext Markup Language" },
+        { "NilaiFa": "fa-brands fa-5x fa-css", "JudulKartu": "CSS", "TeksKartu": "Cascading Style Sheets" },
+        { "NilaiFa": "fa-brands fa-5x fa-js", "JudulKartu": "JS", "TeksKartu": "JavaScript" }
+      ]
+    }
+  </script>
   <script title="JS Framework Bootstrap Minified" src="/lib/bootstrap/js/bootstrap.min.js"></script>
   <script title="JS Framework W3" src="/lib/w3/w3.js"></script>
   <link title="Favicon 16x16" href="favicon-16x16.png" rel="icon" size="16x16" type="image/x-icon">
@@ -21,7 +36,17 @@
   <link id="cssFontawesome" href="/lib/fontawesome/css/fontawesome.css" rel="stylesheet" type="text/css">
   <link id="cssFontawesomeBrands" href="/lib/fontawesome/css/brands.css" rel="stylesheet" type="text/css">
   <link id="stylesheetPedomanw3" href="/lib/style-all.css" rel="stylesheet" type="text/css">
-  <link id="stylesheetHomepage" href="/lib/style-homepage.css" rel="stylesheet" type="text/css">
+  <style title="Stylesheet Homepage" type="text/css">
+    .homepage-content {
+      top: 48%;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .homepage-content .card-group .card-text {
+        height: 48px;
+      }
+    }
+  </style>
 </head>
 
 <body class="homepage">
@@ -33,8 +58,8 @@
         <div class="card mb-3 mb-md-0" w3-repeat="Inputlist">
           <span><i class="{{NilaiFa}}"></i></span>
           <div class="card-body">
-            <h2 class="card-title h5">{{CardTitle}}</h2>
-            <p class="card-text">{{CardText}}</p>
+            <h2 class="card-title h5">{{JudulKartu}}</h2>
+            <p class="card-text">{{TeksKartu}}</p>
             <a class="card-link btn btn-primary" href="{{AHref}}" hreflang="id" type="text/html">Mulai</a>
           </div>
         </div>
@@ -44,7 +69,18 @@
   <footer class="opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/data/footer.html"></footer>
   <div id="bodyOverlay" w3-include-html="/data/loading.html"></div>
   <script title="JS Bagian Bawah Pedoman.w3" src="/lib/script-all-bottom.js"></script>
-  <script title="JS Bagian Bawah Beranda" src="/lib/script-homepage-bottom.js"></script>
+  <script title="JS Bagian Bawah Beranda" type="text/javascript">
+    w3.displayObject("homepageCardGroup", homepagecardObject);
+    function homepagecardResponsive() {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        w3.addClass(".homepage-content",
+          "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
+      } else {
+        w3.removeClass(".homepage-content",
+          "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
+      }
+    }
+  </script>
 </body>
 
 </html>
