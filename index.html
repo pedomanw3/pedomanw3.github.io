@@ -12,7 +12,11 @@
         *.google.com;
         connect-src 'self'; 
         img-src 'self' data: *.google.com; 
-        style-src 'self' 'sha256-jtMkJG958TNqtzhpP/2mGtgtBMkRw3WZdlqVXdlbX7s=' *.google.com; 
+        style-src 'self' *.google.com
+        'sha256-jtMkJG958TNqtzhpP/2mGtgtBMkRw3WZdlqVXdlbX7s='
+        'sha256-NhvdGfF8oSpVOCYqgSVFGJhUhMEn/oJsMqHDda2GM94='
+        'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
+        'sha256-cUFuwp4e078DeooEUfiR1pq5f2G7IrZQoHa/JYi5B+4='; 
         base-uri 'self'; 
         form-action 'self'; 
         font-src 'self';">
@@ -28,7 +32,7 @@
   <link rel="preload" href="/lib/fontawesome/css/fontawesome.css" as="style">
   <link rel="preload" href="/lib/fontawesome/css/brands.css" as="style">
   <link rel="preload" href="/lib/fontawesome/css/solid.css" as="style">
-  <link rel="preload" href="/lib/fontawesome/css/style-all.css" as="style">
+  <link rel="preload" href="/lib/style-all.css" as="style">
   <script title="JS Bagian Atas Pedoman.w3" src="/lib/script-all-top.js"></script>
   <script title="JS Bagian Atas Beranda" type="text/javascript">
     var homepagecardObject = {
