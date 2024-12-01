@@ -6,6 +6,9 @@
     height: 40px;
     max-width: 220px;
   }
+  .navbar form {
+    padding-left: 28px;
+  }
   /* transition medium breakpoint */
   .transition-md-opacity {
     transition-property: opacity;
@@ -24,5 +27,10 @@
   }
   .search-input-focused .navbar-nav.transition-md-delay-navbar-nav {
     transition-delay: 0s;
+  }
+}
+@media (min-width: 992px) {
+  .navbar form {
+    padding-left: 16px;
   }
 }
