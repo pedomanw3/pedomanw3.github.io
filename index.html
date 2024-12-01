@@ -8,19 +8,27 @@
         script-src 'self'
         'sha256-81pbZRw38HYLGtonRQfKGEv0U9X2T6OyBvjNPXm3p+Q='
         'sha256-u8Xa5fEIHQEAunMVCEB9zFX0WfoFpLTzZPijphXp9aU='
-        'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=';
+        'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='
+        *.google.com;
         connect-src 'self'; 
-        img-src 'self' data:; 
-        style-src 'self' 'sha256-jtMkJG958TNqtzhpP/2mGtgtBMkRw3WZdlqVXdlbX7s='; 
+        img-src 'self' data: *.google.com; 
+        style-src 'self' 'sha256-jtMkJG958TNqtzhpP/2mGtgtBMkRw3WZdlqVXdlbX7s=' *.google.com; 
         base-uri 'self'; 
         form-action 'self'; 
         font-src 'self';">
   <title>Pedoman.w3</title>
-  <meta charset="UTF-8">
-  <meta name="author" content="banditsKid">
-  <meta name="description" content="Pedoman World Wide Web Gratis">
-  <meta name="keywords" content="HTML, Tag HTML, Atribut HTML, CSS, JavaScript">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="http://cse.google.com">
+  <link rel="preconnect" href="https://cse.google.com">
+  <link rel="preload" href="/lib/script-all-top.js" as="script">
+  <link rel="preload" href="/lib/script-all-bottom.js" as="script">
+  <link rel="preload" href="/lib/bootstrap/js/bootstrap.min.js" as="script">
+  <link rel="preload" href="/lib/w3/w3.js" as="script">
+  <link rel="preload" href="https://cse.google.com/cse.js?cx=778d3d34ed6fa4e9b" as="script">
+  <link rel="preload" href="/lib/bootstrap/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="/lib/fontawesome/css/fontawesome.css" as="style">
+  <link rel="preload" href="/lib/fontawesome/css/brands.css" as="style">
+  <link rel="preload" href="/lib/fontawesome/css/solid.css" as="style">
+  <link rel="preload" href="/lib/fontawesome/css/style-all.css" as="style">
   <script title="JS Bagian Atas Pedoman.w3" src="/lib/script-all-top.js"></script>
   <script title="JS Bagian Atas Beranda" type="text/javascript">
     var homepagecardObject = {
@@ -33,11 +41,17 @@
   </script>
   <script title="JS Framework Bootstrap Minified" src="/lib/bootstrap/js/bootstrap.min.js"></script>
   <script title="JS Framework W3" src="/lib/w3/w3.js"></script>
+  <meta charset="UTF-8">
+  <meta name="author" content="banditsKid">
+  <meta name="description" content="Pedoman World Wide Web Gratis">
+  <meta name="keywords" content="HTML, Tag HTML, Atribut HTML, CSS, JavaScript">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link title="Favicon 16x16" href="favicon-16x16.png" rel="icon" size="16x16" type="image/x-icon">
   <link title="Favicon 32x32" href="favicon-32x32.png" rel="icon" size="32x32" type="image/x-icon">
   <link id="cssFrameworkBootstrapMinified" href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link id="cssFontawesome" href="/lib/fontawesome/css/fontawesome.css" rel="stylesheet" type="text/css">
   <link id="cssFontawesomeBrands" href="/lib/fontawesome/css/brands.css" rel="stylesheet" type="text/css">
+  <link id="cssFontawesomeSolid" href="/lib/fontawesome/css/solid.css" rel="stylesheet" type="text/css">
   <link id="stylesheetPedomanw3" href="/lib/style-all.css" rel="stylesheet" type="text/css">
   <style title="Stylesheet Homepage" type="text/css">
     .homepage-content {
@@ -71,6 +85,10 @@
   </main>
   <footer class="opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/data/footer.html"></footer>
   <div id="bodyOverlay" w3-include-html="/data/loading.html"></div>
+  <div class="gcse-pedoman-w3 visually-hidden" id="gcsePedomanW3">
+    <div class="gcse-search"></div>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
   <script title="JS Bagian Bawah Pedoman.w3" src="/lib/script-all-bottom.js"></script>
   <script title="JS Bagian Bawah Beranda" type="text/javascript">
     w3.displayObject("homepageCardGroup", homepagecardObject);
@@ -89,6 +107,7 @@
       }
     }
   </script>
+  <script async src="https://cse.google.com/cse.js?cx=778d3d34ed6fa4e9b"></script>
 </body>
 
 </html>

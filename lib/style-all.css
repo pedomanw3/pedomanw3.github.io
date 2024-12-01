@@ -1,13 +1,11 @@
+
 .body-overlay {
   z-index: 1021
 }
 @media (min-width: 768px) {
-  .navbar .form-control {
-    height: 40px;
-    max-width: 220px;
-  }
-  .navbar form {
-    padding-left: 28px;
+  /* Width Google CSE */
+  .gcse-pedoman-w3 .form-control {
+    width: 208px;
   }
   /* transition medium breakpoint */
   .transition-md-opacity {
@@ -24,13 +22,5 @@
   }
   .transition-md-delay-navbar-nav {
     transition-delay: 0.05s;
-  }
-  .search-input-focused .navbar-nav.transition-md-delay-navbar-nav {
-    transition-delay: 0s;
-  }
-}
-@media (min-width: 992px) {
-  .navbar form {
-    padding-left: 16px;
   }
 }
