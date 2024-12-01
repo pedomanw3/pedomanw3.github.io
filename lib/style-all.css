@@ -3,7 +3,7 @@
 }
 @media (min-width: 768px) {
   .navbar .form-control {
-    padding: 10px;
+    height: 40px;
     max-width: 220px;
   }
   /* transition medium breakpoint */
@@ -24,10 +24,5 @@
   }
   .search-input-focused .navbar-nav.transition-md-delay-navbar-nav {
     transition-delay: 0s;
-  }
-}
-@media (min-width: 768px) and (max-width: 790px) {
-  .navbar .form-control {
-    max-width: 200px;
   }
 }
