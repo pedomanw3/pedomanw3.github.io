@@ -2,37 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="id-ID">
 
 <head>
-  <meta http-equiv="Content-Security-Policy"
-        content="
-        default-src 'none'; 
-        script-src 'self'
-        'sha256-81pbZRw38HYLGtonRQfKGEv0U9X2T6OyBvjNPXm3p+Q='
-        'sha256-u8Xa5fEIHQEAunMVCEB9zFX0WfoFpLTzZPijphXp9aU='
-        'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='
-        *.google.com;
-        connect-src 'self'; 
-        img-src 'self' data: *.google.com; 
-        style-src 'self' *.google.com
-        'sha256-jtMkJG958TNqtzhpP/2mGtgtBMkRw3WZdlqVXdlbX7s='
-        'sha256-NhvdGfF8oSpVOCYqgSVFGJhUhMEn/oJsMqHDda2GM94='
-        'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
-        'sha256-cUFuwp4e078DeooEUfiR1pq5f2G7IrZQoHa/JYi5B+4='; 
-        base-uri 'self'; 
-        form-action 'self'; 
-        font-src 'self';">
   <title>Pedoman.w3</title>
-  <link rel="preconnect" href="http://cse.google.com">
-  <link rel="preconnect" href="https://cse.google.com">
-  <link rel="preload" href="/lib/script-all-top.js" as="script">
-  <link rel="preload" href="/lib/script-all-bottom.js" as="script">
-  <link rel="preload" href="/lib/bootstrap/js/bootstrap.min.js" as="script">
-  <link rel="preload" href="/lib/w3/w3.js" as="script">
-  <link rel="preload" href="https://cse.google.com/cse.js?cx=778d3d34ed6fa4e9b" as="script">
-  <link rel="preload" href="/lib/bootstrap/css/bootstrap.min.css" as="style">
-  <link rel="preload" href="/lib/fontawesome/css/fontawesome.css" as="style">
-  <link rel="preload" href="/lib/fontawesome/css/brands.css" as="style">
-  <link rel="preload" href="/lib/fontawesome/css/solid.css" as="style">
-  <link rel="preload" href="/lib/style-all.css" as="style">
   <script title="JS Bagian Atas Pedoman.w3" src="/lib/script-all-top.js"></script>
   <script title="JS Bagian Atas Beranda" type="text/javascript">
     var homepagecardObject = {
@@ -71,8 +41,8 @@
 </head>
 
 <body class="homepage">
-  <header class="sticky-top opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/data/header.html"></header>
-  <main class="opacity-0 transition-md-opacity transition-md-duration-05s">
+  <header w3-include-html="/data/header.html" class="sticky-top"></header>
+  <main>
     <div class="homepage-content container-fluid container-lg px-md-4 text-center">
       <h1 class="display-5 my-3 pb-3 pb-md-0">Referensi Web Development</h1>
       <div class="card-group d-block d-md-flex" id="homepageCardGroup">
@@ -87,8 +57,8 @@
       </div>
     </div>
   </main>
-  <footer class="opacity-0 transition-md-opacity transition-md-duration-05s" w3-include-html="/data/footer.html"></footer>
-  <div id="bodyOverlay" w3-include-html="/data/loading.html"></div>
+  <footer w3-include-html="/data/footer.html"></footer>
+  <div w3-include-html="/data/loading.html" id="bodyOverlay"></div>
   <div class="gcse-pedoman-w3 visually-hidden" id="gcsePedomanW3">
     <div class="gcse-search"></div>
     <i class="fa-solid fa-magnifying-glass"></i>
@@ -96,7 +66,7 @@
   <script title="JS Bagian Bawah Pedoman.w3" src="/lib/script-all-bottom.js"></script>
   <script title="JS Bagian Bawah Beranda" type="text/javascript">
     w3.displayObject("homepageCardGroup", homepagecardObject);
-    function homepagecardResponsive() {
+    function responsiveHomepageCard() {
       if (window.matchMedia("(min-width: 768px)").matches) {
         w3.addClass(".homepage-content",
           "position-absolute start-50 translate-middle justify-content-center flex-nowrap");
