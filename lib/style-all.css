@@ -1,6 +1,12 @@
 .body-overlay {
   z-index: 1030
 }
+.fa-magnifying-glass {
+  fill: var(--bs-success);
+}
+button:hover .fa-magnifying-glass {
+  fill: var(--bs-white);
+}
 @media (min-width: 768px) {
   /* Width Google CSE */
   .gcse-pedoman-w3 .form-control {
