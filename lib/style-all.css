@@ -1,26 +1,39 @@
 
 .body-overlay {
-  z-index: 1021
+  z-index: 1030
+}
+@media (max-width: 575px) {
+  .body-overlay .position-absolute {
+    width: 60% !important;
+  }
 }
 @media (min-width: 768px) {
   /* Width Google CSE */
   .gcse-pedoman-w3 .form-control {
     width: 208px;
   }
-  /* transition medium breakpoint */
-  .transition-md-opacity {
-    transition-property: opacity;
-  }
-  .transition-md-max-width {
-    transition-property: max-width;
-  }
-  .transition-md-duration-015s {
-    transition-duration: 0.15s;
-  }
-  .transition-md-duration-05s {
-    transition-duration: 0.5s;
-  }
-  .transition-md-delay-navbar-nav {
-    transition-delay: 0.05s;
-  }
+}
+/* transition property */
+.transition-opacity {
+  transition-property: opacity;
+}
+/* transition duration */
+.transition-duration-01 {
+  transition-duration: 0.1s;
+}
+.transition-duration-02 {
+  transition-duration: 0.2s;
+}
+.transition-duration-03 {
+  transition-duration: 0.3s;
+}
+/* transition delay */
+.transition-delay-01 {
+  transition-delay: 0.1s;
+}
+.transition-delay-02 {
+  transition-delay: 0.2s;
+}
+.transition-delay-03 {
+  transition-delay: 0.3s;
 }
