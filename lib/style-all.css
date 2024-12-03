@@ -1,11 +1,5 @@
-
 .body-overlay {
   z-index: 1030
-}
-@media (max-width: 575px) {
-  .body-overlay .position-absolute {
-    width: 60% !important;
-  }
 }
 @media (min-width: 768px) {
   /* Width Google CSE */
