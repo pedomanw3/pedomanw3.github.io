@@ -18,6 +18,9 @@ button:hover .fa-magnifying-glass {
   transition-property: opacity;
 }
 /* transition duration */
+.transition-duration-0 {
+  transition-duration: 0s;
+}
 .transition-duration-01 {
   transition-duration: 0.1s;
 }
@@ -28,9 +31,6 @@ button:hover .fa-magnifying-glass {
   transition-duration: 0.3s;
 }
 /* transition delay */
-.transition-delay-005 {
-  transition-delay: 0.05s;
-}
 .transition-delay-01 {
   transition-delay: 0.1s;
 }
