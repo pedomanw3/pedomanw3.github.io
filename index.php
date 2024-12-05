@@ -3,6 +3,11 @@
 
 <head>
   <title>Pedoman.w3</title>
+  <?php include "include/script-top.php";?>
+  <meta name="description" content="Pedoman World Wide Web Gratis">
+  <meta name="keywords" content="HTML, Tag HTML, Atribut HTML, CSS, JavaScript">
+  <?php include "include/meta.php";?>
+  <?php include "include/link.php";?>
   <script title="JS Bagian Atas Beranda" type="text/javascript">
     var homepagecardObject = {
       "Inputlist": [
@@ -12,17 +17,6 @@
       ]
     }
   </script>
-  <script title="JS Framework Bootstrap Minified" src="/lib/bootstrap/js/bootstrap.min.js"></script>
-  <script title="JS Framework W3" src="/lib/w3/w3.js"></script>
-  <meta charset="UTF-8">
-  <meta name="author" content="banditsKid">
-  <meta name="description" content="Pedoman World Wide Web Gratis">
-  <meta name="keywords" content="HTML, Tag HTML, Atribut HTML, CSS, JavaScript">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link title="Favicon 16x16" href="favicon-16x16.png" rel="icon" size="16x16" type="image/x-icon">
-  <link title="Favicon 32x32" href="favicon-32x32.png" rel="icon" size="32x32" type="image/x-icon">
-  <link id="cssFrameworkBootstrapMinified" href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link id="stylesheetPedomanw3" href="/lib/style-all.css" rel="stylesheet" type="text/css">
   <style title="Stylesheet Homepage" type="text/css">
     @media (min-width: 576px) and (max-width: 767px) {
       .homepage-content {
@@ -52,7 +46,7 @@
 </head>
 
 <body class="homepage">
-  <header w3-include-html="/data/header.html" class="opacity-0 transition-opacity transition-duration-03 sticky-top"></header>
+  <?php include "include/header.php";?>
   <main class="opacity-0 transition-opacity transition-duration-03 transition-delay-01">
     <div class="container-fluid container-lg py-3 px-md-4">
       <h1 class="pt-1 pb-3 mt-1 mb-4 display-5 text-center">Referensi Web Development</h1>
@@ -88,18 +82,9 @@
       </div>
     </div>
   </main>
-  <footer class="opacity-0 transition-opacity transition-duration-03 bg-w3-shamrock bg-dark text-white" w3-include-html="/data/footer.html"></footer>
-  <div w3-include-html="/data/loading.html" id="bodyOverlay"></div>
-  <div class="gcse-pedoman-w3" id="gcsePedomanW3">
-    <script async src="https://cse.google.com/cse.js?cx=778d3d34ed6fa4e9b"></script>
-    <div class="gcse-search"></div>
-    <svg class="fa-magnifying-glass" width="20" height="20" id="famagnifyingglass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-      <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-    </svg>
-  </div>
-  <!-- Script Bawah -->
-  <script title="JS Bagian Bawah Pedoman.w3" src="/lib/script-all-bottom.js"></script>
+  <?php include "include/footer.php";?>
+  <?php include "include/overlay.php";?>
+  <?php include "include/script-bottom.php";?>
   <script title="JS Bagian Bawah Beranda" type="text/javascript">
     w3.displayObject("homepageCardGroup", homepagecardObject);
     function responsiveHomepageCard() {
