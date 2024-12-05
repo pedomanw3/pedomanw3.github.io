@@ -13,7 +13,7 @@ function callbackEventListener() {
 }
 /* Callback display Object */
 function callbackDisplayObject() {
-  w3.getHttpObject("/data/topnav-object.js", blockTopnavObject);
+  w3.getHttpObject("/include/topnav-object.js", blockTopnavObject);
   function blockTopnavObject(topnavObject) {
     w3.displayObject("listTopnav", topnavObject);
   }
